@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revisión de Metas Mitad de Año — ENGIE</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="field-bg" aria-hidden="true">
+    <svg class="field-svg" viewBox="0 0 500 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="30" width="440" height="840" fill="none" stroke="white" stroke-width="1.5"/>
+      <line x1="30" y1="450" x2="470" y2="450" stroke="white" stroke-width="1.5"/>
+      <circle cx="250" cy="450" r="70" fill="none" stroke="white" stroke-width="1.5"/>
+      <circle cx="250" cy="450" r="4" fill="white" opacity="0.5"/>
+      <rect x="155" y="30" width="190" height="100" fill="none" stroke="white" stroke-width="1.5"/>
+      <rect x="155" y="770" width="190" height="100" fill="none" stroke="white" stroke-width="1.5"/>
+      <rect x="100" y="30" width="300" height="175" fill="none" stroke="white" stroke-width="1.5"/>
+      <rect x="100" y="695" width="300" height="175" fill="none" stroke="white" stroke-width="1.5"/>
+      <circle cx="250" cy="205" r="10" fill="none" stroke="white" stroke-width="1.5"/>
+      <circle cx="250" cy="695" r="10" fill="none" stroke="white" stroke-width="1.5"/>
+      <path d="M180 30 Q250 80 320 30" fill="none" stroke="white" stroke-width="1.5"/>
+      <path d="M180 870 Q250 820 320 870" fill="none" stroke="white" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <main class="container">
+    <header class="header">
+      <div class="logo-wrap">
+        <!-- Reemplaza este div con tu logo PNG cuando lo tengas -->
+        <div class="logo-placeholder">
+          <span class="logo-text">engie</span>
+          <div class="logo-dot"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="ball-decoration" aria-hidden="true">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="60" cy="60" r="56" fill="none" stroke="white" stroke-width="1.5"/>
+          <path d="M60 4 L74 40 L110 40 L82 62 L94 98 L60 76 L26 98 L38 62 L10 40 L46 40 Z" fill="none" stroke="white" stroke-width="1.2"/>
+          <circle cx="60" cy="60" r="56" fill="none" stroke="white" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.3"/>
+        </svg>
+      </div>
+      <h1 class="headline">
+        <span class="line-1">¡Estás a un</span>
+        <span class="line-2">paso de</span>
+        <span class="line-3">participar!</span>
+      </h1>
+      <div class="accent-bar"></div>
+      <p class="subtext">
+        Si ya comenzaste tu <strong>Revisión de Metas para Mitad de Año</strong>, registra tus datos, tu avance y participa en el sorteo de boletos para un partido.
+      </p>
+    </section>
+
+    <section class="form-section" id="form-section">
+      <div class="form-card">
+        <div id="form-view">
+          <div class="field-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required />
+          </div>
+          <div class="field-group">
+            <label for="area">Área a la que perteneces</label>
+            <input type="text" id="area" name="area" placeholder="Ej. Recursos Humanos, Operaciones..." required />
+          </div>
+          <button class="btn-submit" id="btn-submit" onclick="registrar()">
+            <span id="btn-text">Registrar Avance</span>
+            <svg id="btn-spinner" class="spinner hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2.5" stroke-dasharray="31.4" stroke-dashoffset="10"/>
+            </svg>
+          </button>
+          <p id="error-msg" class="error-msg hidden">Por favor completa todos los campos.</p>
+        </div>
+
+        <div id="success-view" class="success-view hidden">
+          <div class="success-icon">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="28" fill="none" stroke="#00d4c8" stroke-width="2"/>
+              <path d="M18 30 L26 38 L42 22" stroke="#00d4c8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2 class="success-title">¡Registro exitoso!</h2>
+          <p class="success-sub">Tu participación ha sido guardada. ¡Mucha suerte en el sorteo! ⚽</p>
+        </div>
+      </div>
+
+      <div class="urgency-bar">
+        <span class="urgency-label">Cupo limitado.</span>
+        <span class="urgency-highlight">Registro disponible solo por hoy.</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
