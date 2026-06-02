@@ -66,8 +66,9 @@ body {
 }
 
 .logo-wrap img {
-  height: 40px;
-  width: auto;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
 }
 
 .logo-placeholder {
