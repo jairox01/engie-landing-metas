@@ -21,10 +21,9 @@ function registrar() {
 
   const url = `${APPS_SCRIPT_URL}?nombre=${encodeURIComponent(nombre)}&area=${encodeURIComponent(area)}`;
 
-  const img = new Image();
-  img.onload = img.onerror = function() {
-    document.getElementById('form-view').classList.add('hidden');
-    document.getElementById('success-view').classList.remove('hidden');
-  };
-  img.src = url;
+  fetch(url, { method: 'GET', credentials: 'omit', mode: 'no-cors' })
+    .finally(function() {
+      document.getElementById('form-view').classList.add('hidden');
+      document.getElementById('success-view').classList.remove('hidden');
+    });
 }
