@@ -1,4 +1,5 @@
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyB5b3hr3FcHat3g6-amK6-qkR-hguWC-rF5YLFcPgAWWkjoPNAVrpS2dDNYN3iZVgHsQ/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyF7fxe_4O2dPa9ik279QzztyqxtvFtq7IyTZpBYkSjrc_9tW86IOnfn-xbu3g_qXyvFw/exec';
+
 function registrar() {
   const nombre = document.getElementById('nombre').value.trim();
   const area = document.getElementById('area').value.trim();
@@ -18,14 +19,9 @@ function registrar() {
   btnSpinner.classList.remove('hidden');
   btnSubmit.disabled = true;
 
-  const payload = { nombre, area };
+  const url = `${APPS_SCRIPT_URL}?nombre=${encodeURIComponent(nombre)}&area=${encodeURIComponent(area)}`;
 
-  fetch(APPS_SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  })
+  fetch(url, { method: 'GET', mode: 'no-cors' })
   .then(() => {
     document.getElementById('form-view').classList.add('hidden');
     document.getElementById('success-view').classList.remove('hidden');
