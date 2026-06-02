@@ -21,16 +21,10 @@ function registrar() {
 
   const url = `${APPS_SCRIPT_URL}?nombre=${encodeURIComponent(nombre)}&area=${encodeURIComponent(area)}`;
 
-  fetch(url, { method: 'GET', mode: 'no-cors' })
-  .then(() => {
+  const img = new Image();
+  img.onload = img.onerror = function() {
     document.getElementById('form-view').classList.add('hidden');
     document.getElementById('success-view').classList.remove('hidden');
-  })
-  .catch(() => {
-    btnText.textContent = 'Registrar Avance';
-    btnSpinner.classList.add('hidden');
-    btnSubmit.disabled = false;
-    errorMsg.textContent = 'Hubo un error. Por favor intenta de nuevo.';
-    errorMsg.classList.remove('hidden');
-  });
+  };
+  img.src = url;
 }
