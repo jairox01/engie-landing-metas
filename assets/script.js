@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyF7fxe_4O2dPa9ik279QzztyqxtvFtq7IyTZpBYkSjrc_9tW86IOnfn-xbu3g_qXyvFw/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4z7K0FpF4XVVcd6r11CigwM2hAi0MjrWe61eN7XHUMYvGH2vJ55tnfX6ZBLQ8EQWHaA/exec';
 
 function registrar() {
   const nombre = document.getElementById('nombre').value.trim();
