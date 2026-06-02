@@ -30,11 +30,7 @@
   <main class="container">
     <header class="header">
       <div class="logo-wrap">
-        <!-- Reemplaza este div con tu logo PNG cuando lo tengas -->
-        <div class="logo-placeholder">
-          <span class="logo-text">engie</span>
-          <div class="logo-dot"></div>
-        </div>
+        <img src="assets/img/logo.png" alt="ENGIE" />
       </div>
     </header>
 
@@ -47,7 +43,7 @@
         </svg>
       </div>
       <h1 class="headline">
-        <span class="line-1">¡Estás a un</span>
+        <span class="line-1">¡Estas a un</span>
         <span class="line-2">paso de</span>
         <span class="line-3">participar!</span>
       </h1>
@@ -65,7 +61,7 @@
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required />
           </div>
           <div class="field-group">
-            <label for="area">Área a la que perteneces</label>
+            <label for="area">Area a la que perteneces</label>
             <input type="text" id="area" name="area" placeholder="Ej. Recursos Humanos, Operaciones..." required />
           </div>
           <button class="btn-submit" id="btn-submit" onclick="registrar()">
@@ -78,14 +74,32 @@
         </div>
 
         <div id="success-view" class="success-view hidden">
-          <div class="success-icon">
-            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="30" cy="30" r="28" fill="none" stroke="#00d4c8" stroke-width="2"/>
-              <path d="M18 30 L26 38 L42 22" stroke="#00d4c8" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <div class="reveal-header">
+            <h2 class="reveal-title">
+              <span class="reveal-line-1">NO ERA</span>
+              <span class="reveal-line-2">UN GOL:</span>
+              <span class="reveal-line-highlight">ERA UNA PRÁCTICA</span>
+              <span class="reveal-line-3">SEGURA</span>
+            </h2>
+            <div class="reveal-warning">
+              <svg viewBox="0 0 60 54" xmlns="http://www.w3.org/2000/svg" width="52" height="48">
+                <polygon points="30,4 56,50 4,50" fill="none" stroke="#00d4c8" stroke-width="3" stroke-linejoin="round"/>
+                <line x1="30" y1="20" x2="30" y2="34" stroke="#00d4c8" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="30" cy="42" r="2.5" fill="#00d4c8"/>
+              </svg>
+            </div>
           </div>
-          <h2 class="success-title">¡Registro exitoso!</h2>
-          <p class="success-sub">Tu participación ha sido guardada. ¡Mucha suerte en el sorteo! ⚽</p>
+          <div class="reveal-body">
+            <p>Acabas de hacer parte de un ejercicio pedagógico de <strong>ingeniería social por WhatsApp.</strong></p>
+            <p>El objetivo era practicar una acción clave: <strong>revisar la jugada antes de dar clic.</strong></p>
+            <p>Tus datos están a salvo y este ejercicio es 100% de aprendizaje.</p>
+            <p>La próxima vez, si un mensaje llega por un canal no autorizado, trae un enlace o promete algo atractivo, <strong>detente y repórtalo.</strong></p>
+            <div class="reveal-badge">Próximamente te compartiremos los resultados generales.</div>
+          </div>
+          <div class="reveal-footer">
+            <p class="reveal-footer-text">En la cancha digital, la mejor defensa empieza antes del clic.</p>
+            <p class="reveal-hashtag">#NoTeDejesMeterGol</p>
+          </div>
         </div>
       </div>
 
