@@ -1,5 +1,4 @@
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwr9LzOHtz7fdJDRudv5FsV9IJ9WZl-N7oemVe1SGICwlE2d7CviC890prxMvg06jC-NQ/exec';
-
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyB5b3hr3FcHat3g6-amK6-qkR-hguWC-rF5YLFcPgAWWkjoPNAVrpS2dDNYN3iZVgHsQ/exec';
 function registrar() {
   const nombre = document.getElementById('nombre').value.trim();
   const area = document.getElementById('area').value.trim();
