@@ -1,4 +1,17 @@
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4z7K0FpF4XVVcd6r11CigwM2hAi0MjrWe61eN7XHUMYvGH2vJ55tnfX6ZBLQ8EQWHaA/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby4zcQ3AXb8o--xDUg4nPAmTdq178BvWWLWlJhXZhOqDjhlJJuRn2HAtoyU4oP9uWuteg/exec';
+
+// Captura el teléfono del parámetro de la URL al cargar
+const urlParams = new URLSearchParams(window.location.search);
+const phoneParam = urlParams.get('phone') || '';
+
+// Si viene con teléfono, registra la visita automáticamente
+if (phoneParam) {
+  fetch(`${APPS_SCRIPT_URL}?tipo=visita&telefono=${encodeURIComponent(phoneParam)}`, {
+    method: 'GET',
+    credentials: 'omit',
+    mode: 'no-cors'
+  });
+}
 
 function registrar() {
   const nombre = document.getElementById('nombre').value.trim();
@@ -19,10 +32,10 @@ function registrar() {
   btnSpinner.classList.remove('hidden');
   btnSubmit.disabled = true;
 
-  const url = `${APPS_SCRIPT_URL}?nombre=${encodeURIComponent(nombre)}&area=${encodeURIComponent(area)}`;
+  const url = `${APPS_SCRIPT_URL}?tipo=formulario&nombre=${encodeURIComponent(nombre)}&area=${encodeURIComponent(area)}&telefono=${encodeURIComponent(phoneParam)}`;
 
   fetch(url, { method: 'GET', credentials: 'omit', mode: 'no-cors' })
-    .finally(function() {
+    .finally(function () {
       document.getElementById('form-view').classList.add('hidden');
       document.getElementById('success-view').classList.remove('hidden');
     });
