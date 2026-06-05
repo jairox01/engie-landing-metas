@@ -281,7 +281,6 @@ body {
 .rv-momento {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 700;
-  font-style: italic;
   font-size: clamp(26px, 7vw, 34px);
   color: #4fc3f7;
   text-align: right;
@@ -363,29 +362,26 @@ body {
 }
 
 /* Barra inferior cyan */
+.rv-footer-wrap {
+  position: relative;
+}
 .rv-footer-bar {
   background: #29b6e8;
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  padding: 20px 180px 20px 20px; /* espacio derecho para el robot */
+  margin: 40px 0;
 }
 .rv-footer-text {
   font-size: 15px;
   font-weight: 600;
-  font-style: italic;
   color: #0d2060;
   line-height: 1.4;
-  flex: 1;
 }
-.rv-hashtag {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  color: var(--white);
-  text-align: right;
-  white-space: nowrap;
+.rv-robot {
+  width: 170px;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  pointer-events: none;
 }
 
 /* Mesa de ayuda */
@@ -406,7 +402,7 @@ body {
 
 /* Urgency Bar */
 .urgency-bar {
-  border: 1px solid var(--white-border);
+  border: none;
   border-radius: 10px;
   padding: 14px 20px;
   text-align: center;
@@ -426,7 +422,6 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
   font-weight: 700;
-  font-style: italic;
   color: #b6ff5e;
 }
 

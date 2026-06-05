@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby4zcQ3AXb8o--xDUg4nPAmTdq178BvWWLWlJhXZhOqDjhlJJuRn2HAtoyU4oP9uWuteg/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxWJHrbICicAC3bzczXNV_CqhirukfZFvvA8QqLKCuzSiHSzEiEIdU-3ljJCJnsnOG-dQ/exec';
 
 // Captura el teléfono del parámetro de la URL al cargar
 const urlParams = new URLSearchParams(window.location.search);
@@ -36,7 +36,14 @@ function registrar() {
 
   fetch(url, { method: 'GET', credentials: 'omit', mode: 'no-cors' })
     .finally(function () {
+      // Ocultar toda la sección del formulario y el hero
+      document.querySelector('.header').classList.add('hidden');
+      document.querySelector('.hero').classList.add('hidden');
+      document.querySelector('.urgency-bar').classList.add('hidden');
       document.getElementById('form-view').classList.add('hidden');
+      // Mostrar confirmación
       document.getElementById('success-view').classList.remove('hidden');
+      // Scroll al inicio
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
