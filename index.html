@@ -3,136 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Revisión de objetivos mitad de año — ENGIE</title>
+  <title>ENGIE — #NoTeDejesMeterGol</title>
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="field-bg" aria-hidden="true">
-    <svg class="field-svg" viewBox="0 0 500 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <rect x="30" y="30" width="440" height="840" fill="none" stroke="white" stroke-width="1.5"/>
-      <line x1="30" y1="450" x2="470" y2="450" stroke="white" stroke-width="1.5"/>
-      <circle cx="250" cy="450" r="70" fill="none" stroke="white" stroke-width="1.5"/>
-      <circle cx="250" cy="450" r="4" fill="white" opacity="0.5"/>
-      <rect x="155" y="30" width="190" height="100" fill="none" stroke="white" stroke-width="1.5"/>
-      <rect x="155" y="770" width="190" height="100" fill="none" stroke="white" stroke-width="1.5"/>
-      <rect x="100" y="30" width="300" height="175" fill="none" stroke="white" stroke-width="1.5"/>
-      <rect x="100" y="695" width="300" height="175" fill="none" stroke="white" stroke-width="1.5"/>
-      <circle cx="250" cy="205" r="10" fill="none" stroke="white" stroke-width="1.5"/>
-      <circle cx="250" cy="695" r="10" fill="none" stroke="white" stroke-width="1.5"/>
-      <path d="M180 30 Q250 80 320 30" fill="none" stroke="white" stroke-width="1.5"/>
-      <path d="M180 870 Q250 820 320 870" fill="none" stroke="white" stroke-width="1.5"/>
-    </svg>
-  </div>
+  <main class="page">
 
-  <main class="container">
-    <header class="header">
-      <div class="logo-wrap">
-        <img src="assets/img/logo.png" alt="ENGIE" />
+    <!-- Logos -->
+    <div class="logos">
+      <img src="assets/img/engie-confirmation.png" alt="ENGIE" class="logo-engie" />
+      <img src="assets/img/ciber-embajadores.png" alt="CIBER Embajadores" class="logo-ciber" />
+    </div>
+
+    <!-- Banner robot -->
+    <div class="banner-wrap">
+      <div class="banner">
+        <p class="banner-hashtag">#NoTeDejes<br>MeterGol</p>
       </div>
-    </header>
+      <img src="assets/img/robot-campaign.png" alt="CYB" class="banner-robot" />
+    </div>
 
-    <section class="hero" style="display:none">
-      <div class="ball-decoration" aria-hidden="true">
-        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="56" fill="none" stroke="white" stroke-width="1.5"/>
-          <path d="M60 4 L74 40 L110 40 L82 62 L94 98 L60 76 L26 98 L38 62 L10 40 L46 40 Z" fill="none" stroke="white" stroke-width="1.2"/>
-          <circle cx="60" cy="60" r="56" fill="none" stroke="white" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.3"/>
-        </svg>
-      </div>
-      <h1 class="headline">
-        <span class="line-1">¡Estas a un paso de</span>
-        <span class="line-2">participar!</span>
-      </h1>
-      <p class="subtext">
-        Si ya comenzaste tu Revisión de Metas para Mitad de Año, registra tus datos, tu avance y participa en el sorteo de boletos para un partido.
-      </p>
-    </section>
+    <!-- Footer -->
+    <div class="footer">
+      <p class="footer-title">Antes de dar clic:</p>
+      <p class="footer-sub">valida, cuestiona y reporta</p>
+    </div>
 
-    <section class="form-section" id="form-section" style="display:none">
-      <div class="form-card">
-        <div id="form-view">
-          <div class="field-group">
-            <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required />
-          </div>
-          <div class="field-group">
-            <label for="area">Area a la que perteneces:</label>
-            <input type="text" id="area" name="area" placeholder="Ej. Recursos Humanos, Operaciones..." required />
-          </div>
-          <button class="btn-submit" id="btn-submit" onclick="registrar()">
-            <span id="btn-text">Registrar Avance</span>
-            <svg id="btn-spinner" class="spinner hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2.5" stroke-dasharray="31.4" stroke-dashoffset="10"/>
-            </svg>
-          </button>
-          <p id="error-msg" class="error-msg hidden">Por favor completa todos los campos.</p>
-        </div>
-
-        <div id="success-view" class="success-view hidden">
-
-          <!-- Logos -->
-          <div class="rv-logos">
-            <img src="assets/img/engie-confirmation.png" alt="ENGIE" class="rv-logo" />
-            <img src="assets/img/ciber-embajadores.png" alt="CIBER Embajadores" class="rv-logo" />
-          </div>
-
-          <!-- ¡ALTO AHÍ! -->
-          <div class="rv-alto">
-            <h2 class="rv-alto-text">¡ALTO AHÍ!</h2>
-          </div>
-
-          <!-- Momento de revisar -->
-          <p class="rv-momento">Momento de<br>revisar la jugada</p>
-
-          <!-- Cuerpo: 2 columnas -->
-          <div class="rv-main">
-            <div class="rv-left">
-              <p class="rv-nogol-1">NO ERA</p>
-              <p class="rv-nogol-2">UN GOL:</p>
-              <span class="rv-nogol-highlight">ERA UNA PRÁCTICA</span>
-              <p class="rv-nogol-3">SEGURA</p>
-              <svg class="rv-triangle" viewBox="0 0 60 54" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="30,3 57,51 3,51" fill="none" stroke="#00bcfd" stroke-width="3" stroke-linejoin="round"/>
-                <line x1="30" y1="19" x2="30" y2="33" stroke="#00bcfd" stroke-width="3" stroke-linecap="round"/>
-                <circle cx="30" cy="42" r="2.5" fill="#00bcfd"/>
-              </svg>
-            </div>
-            <div class="rv-right">
-              <p>Acabas de participar en una <strong>simulación segura de intento de fraude digital por WhatsApp,</strong> liderada por el equipo de <strong>Ciberseguridad de ENGIE México.</strong></p>
-              <p>Esta vez tus datos están a salvo.</p>
-              <p>En un caso real, este tipo de mensaje podría buscar que compartas información o hagas clic sin validar.</p>
-              <p><strong>Recuerda:</strong> si un mensaje llega por un canal no autorizado, trae un enlace o promete algo atractivo, <strong>detente y reporta.</strong></p>
-              <div class="rv-badge">Próximamente te compartiremos los resultados generales.</div>
-            </div>
-          </div>
-
-          <!-- Barra inferior cyan -->
-          <div class="rv-footer-wrap">
-            <div class="rv-footer-bar">
-              <p class="rv-footer-text">En la cancha digital, la mejor defensa empieza antes del clic.</p>
-            </div>
-            <img src="assets/img/robot-campaign.png" alt="CYB #NoTeDejesMeterGol" class="rv-robot" />
-          </div>
-
-          <!-- Mesa de ayuda -->
-          <div class="rv-ayuda">
-            <p><strong>Para más información, comunícate con:</strong></p>
-            <p>Mesa de Ayuda ENGIE México</p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="urgency-bar">
-        <span class="urgency-label">Cupo limitado.</span>
-        <span class="urgency-highlight">Registro disponible solo por hoy.</span>
-      </div>
-    </section>
   </main>
-
-  <script src="assets/script.js"></script>
 </body>
 </html>
