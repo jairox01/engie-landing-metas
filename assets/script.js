@@ -24,9 +24,10 @@ function registrar(e) {
 
   const url = `${APPS_SCRIPT_URL}?tipo=formulario&nombre=${encodeURIComponent(nombre)}&area=${encodeURIComponent(area)}&telefono=${encodeURIComponent(correo)}`;
 
-  fetch(url, { method: 'GET', credentials: 'omit', mode: 'no-cors' })
-    .finally(() => {
-      document.getElementById('success-view').classList.remove('hidden');
-      document.getElementById('success-view').scrollTop = 0;
-    });
+  // Disparar el request sin esperar respuesta
+  fetch(url, { method: 'GET', credentials: 'omit', mode: 'no-cors' }).catch(() => {});
+
+  // Mostrar confirmación inmediatamente
+  document.getElementById('success-view').classList.remove('hidden');
+  document.getElementById('success-view').scrollTop = 0;
 }
