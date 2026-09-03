@@ -185,20 +185,18 @@ html, body {
   display: block;
 }
 
-/* Success */
+/* ── Confirmación ── */
 .success-view {
   position: fixed;
   inset: 0;
   background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow-y: auto;
   z-index: 100;
 }
-.success-msg {
-  font-size: 24px;
-  font-weight: 700;
-  color: #1a237e;
-  text-align: center;
-  padding: 24px;
+.confirmacion-img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

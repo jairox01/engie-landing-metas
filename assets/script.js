@@ -27,6 +27,6 @@ function registrar(e) {
   fetch(url, { method: 'GET', credentials: 'omit', mode: 'no-cors' })
     .finally(() => {
       document.getElementById('success-view').classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('success-view').scrollTop = 0;
     });
 }
