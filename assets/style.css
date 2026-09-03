@@ -5,95 +5,200 @@
 }
 
 html, body {
-  min-height: 100%;
   width: 100%;
-}
-
-body {
-  background: #0d2060;
+  background: #fff;
   font-family: 'Barlow', sans-serif;
-  color: #fff;
+  color: #1a237e;
   overflow-x: hidden;
 }
 
-.page {
+/* Top papel picado */
+.top-deco {
+  width: 100%;
+  line-height: 0;
+}
+.top-deco img {
+  width: 100%;
+  display: block;
+}
+
+/* Container */
+.container {
   max-width: 480px;
   margin: 0 auto;
-  min-height: 100vh;
+  padding: 0 20px 32px;
   display: flex;
   flex-direction: column;
-}
-
-/* Logos */
-.logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 48px 24px 40px;
-  flex: 1;
-}
-
-.logo-engie {
-  height: 40px;
-  width: auto;
-}
-
-.logo-ciber {
-  height: 56px;
-  width: auto;
-}
-
-/* Banner robot */
-.banner-wrap {
-  position: relative;
-  margin: 0;
-}
-
-.banner {
-  background: #29b6e8;
-  padding: 32px 24px 32px 220px;
-  min-height: 140px;
-  display: flex;
   align-items: center;
 }
 
-.banner-hashtag {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800;
-  font-size: clamp(32px, 9vw, 42px);
-  color: #0d2060;
-  line-height: 1.1;
-}
-
-.banner-robot {
-  position: absolute;
-  left: -10px;
-  bottom: 0;
-  width: 220px;
-  pointer-events: none;
-}
-
-/* Footer */
-.footer {
-  background: #ffffff;
-  padding: 32px 24px 40px;
+/* Logo */
+.logo-wrap {
+  padding: 16px 0 8px;
   text-align: center;
-  border-radius: 24px 24px 0 0;
-  margin-top: 40px;
+}
+.logo {
+  height: 48px;
+  width: auto;
 }
 
-.footer-title {
-  font-family: 'Barlow', sans-serif;
-  font-size: clamp(20px, 5vw, 26px);
-  font-weight: 700;
-  color: #0d2060;
-  margin-bottom: 6px;
+/* Título */
+.titulo-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 8px 0;
+}
+.titulo {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
 }
 
-.footer-sub {
+/* Texto descriptivo */
+.texto-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 4px 0 8px;
+}
+.texto-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Separador */
+.separador-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 4px 0;
+}
+.separador {
+  width: 80%;
+  max-width: 320px;
+  height: auto;
+}
+
+/* Preview kit */
+.kit-preview-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 8px 0 16px;
+}
+.kit-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Formulario */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a237e;
+}
+
+.field-group input {
+  width: 100%;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 15px;
   font-family: 'Barlow', sans-serif;
-  font-size: clamp(20px, 5vw, 26px);
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field-group input:focus {
+  border-color: #1565c0;
+}
+
+.error-msg {
+  color: #c62828;
+  font-size: 13px;
+  text-align: center;
+}
+
+.hidden { display: none !important; }
+
+/* Botón */
+.btn-submit {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 0 0;
+}
+.btn-img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.spinner {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #cce;
+  border-top-color: #1565c0;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 8px auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Disponible */
+.disponible-wrap {
+  width: 100%;
+  text-align: center;
+  margin: 4px 0 0;
+}
+.disponible {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Bottom deco */
+.bottom-deco {
+  width: 100%;
+  line-height: 0;
+  margin-top: 8px;
+}
+.bottom-deco img {
+  width: 100%;
+  display: block;
+}
+
+/* Success */
+.success-view {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.success-msg {
+  font-size: 24px;
   font-weight: 700;
-  color: #29b6e8;
+  color: #1a237e;
+  text-align: center;
+  padding: 24px;
 }

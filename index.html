@@ -3,35 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ENGIE — #NoTeDejesMeterGol</title>
+  <title>Kit +Mexicano — ENGIE</title>
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <main class="page">
 
-    <!-- Logos -->
-    <div class="logos">
-      <img src="assets/img/engie-confirmation.png" alt="ENGIE" class="logo-engie" />
-      <img src="assets/img/ciber-embajadores.png" alt="CIBER Embajadores" class="logo-ciber" />
+  <!-- Papel picado top -->
+  <div class="top-deco">
+    <img src="assets/img/Guirnaldas grises.png" alt="" />
+  </div>
+
+  <main class="container">
+
+    <!-- Logo -->
+    <div class="logo-wrap">
+      <img src="assets/img/logo.png" alt="ENGIE" class="logo" />
     </div>
 
-    <!-- Banner robot -->
-    <div class="banner-wrap">
-      <div class="banner">
-        <p class="banner-hashtag">#NoTeDejes<br>MeterGol</p>
+    <!-- Título 3D -->
+    <div class="titulo-wrap">
+      <img src="assets/img/titulo-kit.png" alt="¡Ya está listo el Kit +Mexicano!" class="titulo" />
+    </div>
+
+    <!-- Texto descriptivo -->
+    <div class="texto-wrap">
+      <img src="assets/img/TextoDescriptivo.png" alt="Descarga fondos para Teams, stickers y piezas digitales" class="texto-img" />
+    </div>
+
+    <!-- Separador -->
+    <div class="separador-wrap">
+      <img src="assets/img/IlustraciónDivisoria.png" alt="" class="separador" />
+    </div>
+
+    <!-- Preview kit -->
+    <div class="kit-preview-wrap">
+      <img src="assets/img/ImagenPrevisualizaciónKit.png" alt="Este kit incluye: Stickers, Fondos para Teams, Piezas digitales" class="kit-preview" />
+    </div>
+
+    <!-- Formulario -->
+    <form class="form" id="form" onsubmit="registrar(event)">
+      <div class="field-group">
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="name" required />
       </div>
-      <img src="assets/img/robot-campaign.png" alt="CYB" class="banner-robot" />
-    </div>
+      <div class="field-group">
+        <label for="area">Área</label>
+        <input type="text" id="area" name="area" required />
+      </div>
+      <div class="field-group">
+        <label for="correo">Correo corporativo</label>
+        <input type="email" id="correo" name="correo" autocomplete="email" required />
+      </div>
 
-    <!-- Footer -->
-    <div class="footer">
-      <p class="footer-title">Antes de dar clic:</p>
-      <p class="footer-sub">valida, cuestiona y reporta</p>
+      <p id="error-msg" class="error-msg hidden">Por favor completa todos los campos.</p>
+
+      <!-- Botón -->
+      <button type="submit" class="btn-submit" id="btn-submit">
+        <img src="assets/img/BotónDescargarKIt.png" alt="Descargar Kit" class="btn-img" id="btn-img" />
+        <span id="btn-spinner" class="spinner hidden"></span>
+      </button>
+    </form>
+
+    <!-- Disponible -->
+    <div class="disponible-wrap">
+      <img src="assets/img/Texto_DisponiblePorTiempoLimitado.png" alt="Disponible por tiempo limitado" class="disponible" />
     </div>
 
   </main>
+
+  <!-- Cierre / banner bottom -->
+  <div class="bottom-deco">
+    <img src="assets/img/Imagen cierre.png" alt="" />
+  </div>
+
+  <!-- Vista de éxito (oculta) -->
+  <div id="success-view" class="success-view hidden">
+    <p class="success-msg">¡Gracias! Tu kit está en camino. 🎉</p>
+  </div>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
