@@ -1,5 +1,13 @@
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxWJHrbICicAC3bzczXNV_CqhirukfZFvvA8QqLKCuzSiHSzEiEIdU-3ljJCJnsnOG-dQ/exec';
 
+// Registrar visita si viene con ?phone=
+const phoneParam = new URLSearchParams(window.location.search).get('phone') || '';
+if (phoneParam) {
+  fetch(`${APPS_SCRIPT_URL}?tipo=visita&telefono=${encodeURIComponent(phoneParam)}`, {
+    method: 'GET', credentials: 'omit', mode: 'no-cors'
+  }).catch(() => {});
+}
+
 function registrar(e) {
   e.preventDefault();
 
