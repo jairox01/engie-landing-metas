@@ -19,16 +19,17 @@ function registrar(e) {
   const btnImg    = document.getElementById('btn-img');
   const spinner   = document.getElementById('btn-spinner');
 
+  btnSubmit.disabled = true;
   errorMsg.classList.add('hidden');
 
   if (!nombre || !area || !correo) {
     errorMsg.classList.remove('hidden');
+    btnSubmit.disabled = false;
     return;
   }
 
   btnImg.classList.add('hidden');
   spinner.classList.remove('hidden');
-  btnSubmit.disabled = true;
 
   const url = `${APPS_SCRIPT_URL}?tipo=formulario&nombre=${encodeURIComponent(nombre)}&area=${encodeURIComponent(area)}&telefono=${encodeURIComponent(correo)}`;
 
